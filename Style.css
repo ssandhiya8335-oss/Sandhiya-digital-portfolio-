@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 2em 0;
+    }
+    .content {
+      padding: 2em;
+    }
+    .code-box {
+      background: #222;
+      color: #0f0;
+      text-align: left;
+      padding: 1em;
+      margin: 2em auto;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 5px;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <p>Welcome to my personal page!</p>
+  </header>
+
+  <div class="content">
+    <h2>Simple Program Example: Calculator</h2>
+    <div class="code-box" id="output">
+      // Click the button to run a simple addition program
+    </div>
+    <button onclick="runProgram()">Run Program</button>
+  </div>
+
+  <script>
+    function runProgram() {
+      const a = 10;
+      const b = 20;
+      const sum = a + b;
+      const message = `const a = ${a};\nconst b = ${b};\nconst sum = a + b;\n\nResult: ${sum}`;
+      document.getElementById('output').innerText = message;
+    }
+  </script>
+</body>
+</html>
