@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    .download-button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .download-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="name">sandhiya</h1>
+  <p id="email">Email: ssandhiya8335@gmail.com </p>
+  <p id="phone">Phone: +904-305-7012</p>
+
+  <h2>Skills</h2>
+  <ul id="skills-list"></ul>
+
+  <h2>Experience</h2>
+  <ul id="experience-list"></ul>
+
+  <button class="download-button" onclick="downloadResume()">Download Resume</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
