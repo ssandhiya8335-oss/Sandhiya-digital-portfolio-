@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 8px 0 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #009578;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #06cbb4;
+        }
+        #message {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+  </style>
+</head>
+<body>
+    <div class="login">
+        <h2>Login Page</h2>
+        <form id="loginForm">
+            <label><b>Username</b></label>
+            <input type="text" id="username" placeholder="Enter Username" required>
+            
+            <label><b>Password</b></label>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const messageDisplay = document.getElementById('message');
+
+            // Your custom login credentials
+            const correctUsername = 'R. Geetha';
+            const correctPassword = '1234';
+
+            if (username === correctUsername && password === correctPassword) {
+                messageDisplay.textContent = 'Login successful! Welcome, ' + username;
+                messageDisplay.style.color = 'limegreen';
+                // Example: redirect after success
+                // window.location.href = "welcome.html";
+            } else {
+                messageDisplay.textContent = 'Invalid username or password.';
+                messageDisplay.style.color = 'red';
+            }
+
+            document.getElementById('password').value = '';
+        });
+    </script>
+</body>
+</html>
